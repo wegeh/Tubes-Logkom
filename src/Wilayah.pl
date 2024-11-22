@@ -1,0 +1,15 @@
+checkLocationDetail(X) :-
+    game_state(main_game),
+    kode(X, K, N),
+    info_wilayah(X, P, J),
+    write('Kode                  : '),
+    write(K), nl,
+    write('Nama                  : '),
+    write(N), nl,
+    write('Pemilik               : '),
+    write(P), nl,
+    write('Total Tentara         : '),
+    write(J), nl,
+    write('Tetangga              : '),
+    tetangga(X, L),
+    printWilayah(L), !.
